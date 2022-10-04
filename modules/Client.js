@@ -22,11 +22,11 @@ class Client extends User{
 
 
     // add / remove preferences
-    changeVeggieStatus(is = false){
-        this.accountInfo.preference.isVeggie = is
+    changeVeggieStatus(){
+        this.accountInfo.preference.isVeggie = this.accountInfo.preference.isVeggie ? false : true
     }
-    changeCompetitorStatus(is = false){
-        this.accountInfo.preference.isCompetitor = is
+    changeCompetitorStatus(){
+        this.accountInfo.preference.isCompetitor = this.accountInfo.preference.isCompetitor ? false : true
     }
     addRecipeKeyWord(...word){
         this.accountInfo.preference.recipeKeyWords.push(...word)
@@ -43,7 +43,7 @@ class Client extends User{
     addRecipe(recipe){
         this.history.recentRecipes.push(recipe)
     }
-    assCompetition(competition){
+    addCompetition(competition){
         this.history.recentCompetitions.push(competition)  //competition argument could be obj with more details like, id, with who, outcome or winner
     }
 
@@ -51,7 +51,6 @@ class Client extends User{
     changeWFHStatus(){
         this.accountInfo.isWFH = this.accountInfo.isWFH ? false : true
     }
-
 }
 
 export default Client
