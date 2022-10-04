@@ -20,7 +20,7 @@ output.innerText = `clients: ${Object.values(clientData).map((item)=> {
 
 help()
 
-clientData['adam'].changeVeggieStatus(true)
+clientData['adam'].changeVeggieStatus()
 
 clientData['adam'].addRecipeKeyWord('pie', 'grapes', 'cake')
 clientData['adam'].removeRecipeKeyWord('grapes')
