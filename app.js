@@ -18,8 +18,6 @@ output.innerText = `clients: ${Object.values(clientData).map((item)=> {
     return `  ${item.name}`
 })} `
 
-help()
-
 clientData['adam'].changeVeggieStatus()
 
 clientData['adam'].addRecipeKeyWord('pie', 'grapes', 'cake')
